@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(217, 123, 123);
+}
+#pong {
+  border: 2px solid #fff;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#pongTitle {
+  text-align: center;
+  margin-top: 155px;
+  font-size: 60px;
+  color: aquamarine;
+}
+
+#restartButton {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+
+  display: none;
+  font-size: larger;
+  color: white;
+  background-color: blueviolet;
+}
+#startButton {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  font-size: larger;
+  color: white;
+  background-color: blueviolet;
+}
