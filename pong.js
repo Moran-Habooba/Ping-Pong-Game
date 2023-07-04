@@ -13,7 +13,6 @@ wall.src = "sounds/wall.mp3";
 comScore.src = "sounds/comScore.mp3";
 userScore.src = "sounds/userScore.mp3";
 
-// Ball object
 const ball = {
   x: canvas.width / 2,
   y: canvas.height / 2,
@@ -24,27 +23,24 @@ const ball = {
   color: "orange",
 };
 
-// User Paddle
 const user = {
-  x: 0, // left side of canvas
-  y: (canvas.height - 100) / 2, // -100 the height of paddle
+  x: 0,
+  y: (canvas.height - 100) / 2,
   width: 10,
   height: 100,
   score: 0,
   color: "blue",
 };
 
-// COM Paddle
 const com = {
-  x: canvas.width - 10, // - width of paddle
-  y: (canvas.height - 100) / 2, // -100 the height of paddle
+  x: canvas.width - 10,
+  y: (canvas.height - 100) / 2,
   width: 10,
   height: 100,
   score: 0,
   color: "red",
 };
 
-// NET
 const net = {
   x: (canvas.width - 2) / 2,
   y: 0,
@@ -163,10 +159,9 @@ function update() {
   // בודקת באיזה צד הכדור פגע
   let player = ball.x + ball.radius < canvas.width / 2 ? user : com;
 
-  // if the ball hits a paddle
   if (collision(ball, player)) {
     hit.play();
-    // we check where the ball hits the paddle
+
     let collidePoint = ball.y - (player.y + player.height / 2);
     // normalize the value of collidePoint, we need to get numbers between -1 and 1.
     // -player.height/2 < collide Point < player.height/2
